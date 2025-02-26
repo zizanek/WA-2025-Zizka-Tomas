@@ -65,6 +65,32 @@ nav a:hover {
 }
 
 
+/* ========== GALERIE ========== */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
 
 
 
