@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TŽ-Galerie</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <h1>WA - první web (záhlaví webu)</h1>
+        </header>
+        <nav>
+            <!-- Navigace pomocí odrážek -->
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="#">O nás</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="gallery-container">
+                <figure class="gallery-item">
+                    <img src="assets/images/dummy_600x400_000000_88ea90.png" alt="Obrázek 1">
+                    <figcaption>Popis obrázku 1</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/dummy_600x400_000000_8bb7e5.png" alt="Obrázek 2">
+                    <figcaption>Popis obrázku 2</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/dummy_600x400_000000_cbd602.png" alt="Obrázek 3">
+                    <figcaption>Popis obrázku 3</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/dummy_600x400_000000_d1655e.png" alt="Obrázek 4">
+                    <figcaption>Popis obrázku 4</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/dummy_600x400_000000_f74ac9.png" alt="Obrázek 5">
+                    <figcaption>Popis obrázku 5</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/dummy_600x400_ffffff_01849b.png" alt="Obrázek 6">
+                    <figcaption>Popis obrázku 6</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/dummy_600x400_ffffff_1b2d7c.png" alt="Obrázek 7">
+                    <figcaption>Popis obrázku 7</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/dummy_600x400_ffffff_d00ffc.png" alt="Obrázek 8">
+                    <figcaption>Popis obrázku 8</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/dummy_600x400_000000_d1655e.png" alt="Obrázek 9">
+                    <figcaption>Popis obrázku 9</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/dummy_600x400_ffffff_01849b.png" alt="Obrázek 10">
+                    <figcaption>Popis obrázku 10</figcaption>
+                </figure>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 Tomáš Žižka (zápatí webu)</p>
+            <input type="color" id="colorPicker" value="#87cefa">
+        </footer>
+    </div>
+    <script>
+        const colorPicker = document.getElementById('colorPicker');
+        const body = document.body;
+        const textElements = document.querySelectorAll('h1, p');
+
+        colorPicker.addEventListener('input', () => {
+            const color = colorPicker.value;
+            body.style.background = color;
+           
+            // Převod hex na RGB
+            const r = parseInt(color.substr(1, 2), 16);
+            const g = parseInt(color.substr(3, 2), 16);
+            const b = parseInt(color.substr(5, 2), 16);
+           
+            // Výpočet světlosti (luminance) podle vnímání oka
+            const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+           
+            // Pokud je světlost vysoká, nastavíme černý text, jinak bílý
+            //const textColor = luminance > 0.5 ? 'black' : 'white';
+            //textElements.forEach(el => el.style.color = textColor);
+        });
+    </script>
+</body>    
