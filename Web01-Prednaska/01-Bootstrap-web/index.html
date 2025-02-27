@@ -14,12 +14,92 @@
     <nav>
         <div class="container">
             <a href="#">Bootstrap Example Page</a>
-            <a href="">Tlačítka</a>
-            <a href="">Karty</a>
-            <a href="">Tabulky</a>
+            <a href="#buttons">Tlačítka</a>
+            <a href="#cards">Karty</a>
+            <a href="#tables">Tabulky</a>
         </div>
-    </nav> 
+    </nav>
+    <header>
+        <h1>Vítejte na mé stránce o toolkitu Bootstrap</h1>
+        <p>Budu zde prezentovat vybrané komponenty.</p>
+        <a href="#buttons" class="btn btn-light btn-lg">Začít</a>
+    </header>
+    
+    <!-- Sekce: Tlačítka -->
+    <section class="container" id="buttons">
+        <h2>Tlačítka</h2>
+        <p>Bootstrap umožňuje snadné stylování tlačítek pomocí tříd jako např. <code>btn-primary</code>.</p>
 
+        <!-- Ukázka tlačítek -->
+        <div class="text-center">
+            <button class="btn btn-primary">Primary button</button>
+            <button class="btn btn-warning">Warning button</button>      
+        </div>
+
+        <!-- Kód tlačítek -->
+        <pre>
+            <code>
+                &lt;button class="btn btn-primary"&gt;Primary button&lt;/button&gt;
+                &lt;button class="btn btn-warning"&gt;Warning button&lt;/button&gt;
+            </code>
+        </pre> 
+    </section> 
+
+
+    <!-- Sekce: Karty -->
+    <section class="container" id="cards">
+        <h2>Karty</h2>
+        <p>Karta v Bootstrapu je super způsob jak strukturovat obsah.</p>
+
+        <!-- Ukázka karty -->
+        <div class="card mx-auto">
+            <div class="card-body">
+                <h3 class="card-title">Ukázková karta</h3>
+                <p class="card-text">Toto je ukázka karty v Bootstrapu.</p>
+                <a href="#" class="btn btn-info">Detail</a>
+            </div>
+        </div> 
+        
+        <!-- Ukázka kódu karty -->
+
+    </section> 
+
+
+    <!-- Sekce: Tabulky -->
+    <section class="container" id="tables">
+        <h2>Tabulky</h2>
+        <p>Tabulky lze v Bootstrapu stylovat pomocí tříd jako např. <code>table-striped</code></p>
+
+        <!-- Ukázka tabulky -->
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Jméno</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Jan Novák</td>
+                    <td>jan.novak@nevim.cz</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jana Nováková</td>
+                    <td>jana.novakova@nevim.cz</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Petr Novák</td>
+                    <td>petr.novak@nevim.cz</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Ukázka kódu tabulky -->
+    </section>
 
     
     
