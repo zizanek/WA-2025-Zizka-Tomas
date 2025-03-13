@@ -17,6 +17,7 @@
                 <li><a href="index.html">Domů</a></li>
                 <li><a href="gallery.html">Galerie</a></li>
                 <li><a href="01-Bootstrap-web/index.html">Bootstrap web</a></li>
+                <li><a href="css-jednotky.html">CSS - jednotky</a></li>
                 <li><a href="#">O nás</a></li>
                 <li><a href="#">Kontakt</a></li>
             </ul>
@@ -54,34 +55,8 @@
         </main>
         <footer>
             <p>&copy; 2025 Tomáš Žižka (zápatí webu)</p>
-            <input type="color" id="colorPicker" value="#87cefa">
         </footer>
     </div>
-    <h1>Nadpis - barva se bude měnit</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio a neque eveniet amet molestiae totam aliquam ipsa voluptas corporis. Vero rem laborum quod repellendus blanditiis porro, earum amet beatae in!</p>
-    
-    <script>
-        const colorPicker = document.getElementById('colorPicker');
-        const body = document.body;
-        const textElements = document.querySelectorAll('h1, p');
 
-
-        colorPicker.addEventListener('input', () => {
-            const color = colorPicker.value;
-            body.style.background = color;
-           
-            // Převod hex na RGB
-            const r = parseInt(color.substr(1, 2), 16);
-            const g = parseInt(color.substr(3, 2), 16);
-            const b = parseInt(color.substr(5, 2), 16);
-           
-            // Výpočet světlosti (luminance) podle vnímání oka
-            const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-           
-            // Pokud je světlost vysoká, nastavíme černý text, jinak bílý
-            //const textColor = luminance > 0.5 ? 'black' : 'white';
-            //textElements.forEach(el => el.style.color = textColor);
-        });
-    </script>
 </body>
 </html>
