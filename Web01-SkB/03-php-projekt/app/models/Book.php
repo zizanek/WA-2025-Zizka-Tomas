@@ -30,4 +30,11 @@ class Book {
             ':images' => json_encode($images) // Ukládání obrázků jako JSON
         ]);
     }
+
+    public function getAll() {
+        $sql = "SELECT * FROM books ORDER BY created_at DESC";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchALL(PDO::FETCH_ASSOC);
+    }
 }
