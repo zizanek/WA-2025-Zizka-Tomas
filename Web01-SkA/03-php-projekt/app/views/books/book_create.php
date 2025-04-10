@@ -26,7 +26,7 @@
                             <a class="nav-link" href="../../views/books/book_create.php">Přidat knihu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../controllers/books_list.php">Výpis knih</a>
+                            <a class="nav-link" href="../../controllers/book_list.php">Výpis knih</a>
                         </li>
                     </ul>
                 </div>
