@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../../controllers/book_list.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -28,6 +37,23 @@
                         <li class="nav-item">
                             <a class="nav-link" href="../../controllers/book_list.php">Výpis knih</a>
                         </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <?php if (isset($_SESSION['username'])): ?>
+                            <li class="nav-item">
+                                <span class="nav-link text-white">Přihlášen jako: <strong><?= htmlspecialchars($_SESSION['username']) ?></strong></span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../controllers/logout.php">Odhlásit se</a>
+                            </li>
+                        <?php else: ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../views/auth/login.php">Přihlášení</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../views/auth/register.php">Registrace</a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </div>
