@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php 
+//session_start();
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="cs">
@@ -30,6 +37,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Výpis knih</a>
                         </li>
+                        <?php if (isset($_SESSION['username'])): ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../views/books/books_edit_delete.php">Editace a mazání</a>
+                            </li>
+                        <?php endif; ?>
+
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <?php if (isset($_SESSION['username'])): ?>
